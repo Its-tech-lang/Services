@@ -120,7 +120,7 @@ font-size:0.85rem;
 <div class="card">
 <h2>App Promotion</h2>
 <p>Boost installs using smart traffic routing methods.</p>
-<a href="#" class="btn trigger-btn" data-link="https://ouo.io/BmL7mlq">Start Now</a>
+<a href="#" class="btn trigger-btn" data-link="https://ouo.io/knLMtKb">Start Now</a>
 </div>
 
 <div class="card">
@@ -132,19 +132,21 @@ font-size:0.85rem;
 <div class="card">
 <h2>Ad Monetization Setup</h2>
 <p>Setup best ad networks for maximum revenue.</p>
-<a href="#" class="btn trigger-btn" data-link="https://ouo.io/NaP73s">Setup Now</a>
+<a href="#" class="btn trigger-btn" data-link="https://ouo.io/BmL7mlq">Setup Now</a>
 </div>
 
 <div class="card">
 <h2>Traffic Exchange</h2>
 <p>High quality redirect traffic for offers.</p>
-<a href="#" class="btn trigger-btn" data-link="https://ouo.io/hbSY9vh">Activate</a>
+<a href="#" class="btn trigger-btn" data-link="https://ouo.io/NaP73s">Activate</a>
 </div>
 
 </div>
 
 <div class="whatsapp">
-<a href="https://ouo.io/knLMtKb" id="waBtn">Contact on WhatsApp</a>
+<a href="https://ouo.io/hbSY9vh" target="_blank">
+Contact on WhatsApp
+</a>
 </div>
 
 <footer>
@@ -156,10 +158,10 @@ font-size:0.85rem;
 <script>
 // ===== First Click Smartlink (WhatsApp excluded) =====
 let firstClickDone = false;
-const firstClickLink = "https://ouo.io/WlRv1n";
+const firstClickLink = "FIRST_CLICK_LINK"; // apna main ad link
 
 document.addEventListener("click", function(e){
-  const isWhatsApp = e.target.closest('#waBtn');
+  const isWhatsApp = e.target.closest('.whatsapp a');
   const isButton = e.target.closest('.trigger-btn');
 
   if(!firstClickDone && !isWhatsApp && !isButton){
@@ -177,23 +179,6 @@ document.querySelectorAll(".trigger-btn").forEach(btn=>{
       window.open(link, "_blank");
     }
   });
-});
-
-// ===== WhatsApp Smooth Redirect (App first, Web fallback) =====
-const phone = "917819930087";
-const text = "Hello I want to know about your services";
-
-document.getElementById("waBtn").addEventListener("click", function(e){
-  e.preventDefault();
-
-  const appLink = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
-  const webLink = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-
-  window.location.href = appLink;
-
-  setTimeout(function(){
-    window.location.href = webLink;
-  }, 800);
 });
 </script>
 
