@@ -16,18 +16,6 @@
   margin:0 auto 15px;
   filter:drop-shadow(0 0 12px #00FF7F);
 }
-
-/* ✅ NEW BIG HEADER LOGO */
-.header-logo{
-  width:100%;
-  max-width:900px;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  display:block;
-  margin:0 auto 25px;
-  filter:drop-shadow(0 0 25px #00FF7F);
-}
-
 :root{
 --bg:#040b06;
 --glass:rgba(0,255,127,0.06);
@@ -132,10 +120,6 @@ font-size:0.85rem;
 <div class="container">
 
 <header>
-
-<!-- ✅ BIG YOUTUBE RATIO LOGO -->
-<img src="logo.png" alt="logo" class="header-logo">
-
 <h1>Premium Digital Service Hub</h1>
 <p>Professional tools, promotion & monetization solutions</p>
 </header>
@@ -154,12 +138,14 @@ font-size:0.85rem;
     <a href="#" class="btn trigger-btn" data-link="https://ouo.io/BmL7mlq">Get Service</a>
   </div>
 
+  <!-- Separate Card -->
   <div class="card">
     <h2>Ad Monetization Setup</h2>
     <p>Setup best ad networks for maximum revenue.</p>
     <a href="#" class="btn trigger-btn" data-link="https://ouo.io/YbxSeI">Setup Now</a>
   </div>
 
+  <!-- Separate Card -->
   <div class="card">
     <h2>Traffic Exchange</h2>
     <p>High quality redirect traffic for offers.</p>
@@ -181,13 +167,14 @@ Most Demanding Services Created By
 <p> Using Ai </p>
 <br><br>
 <p>This Website Contain's ADS</p>
-</footer>
+<footer>
 
 </div>
 
 <script>
+// ===== First Click Smartlink (WhatsApp excluded) =====
 let firstClickDone = false;
-const firstClickLink = "FIRST_CLICK_LINK";
+const firstClickLink = "FIRST_CLICK_LINK"; // apna main ad link yahan daalo
 
 document.addEventListener("click", function(e){
   const isWhatsApp = e.target.closest('.whatsapp a');
@@ -199,6 +186,7 @@ document.addEventListener("click", function(e){
   }
 });
 
+// ===== Button Ad Links =====
 document.querySelectorAll(".trigger-btn").forEach(btn=>{
   btn.addEventListener("click", function(e){
     e.preventDefault();
